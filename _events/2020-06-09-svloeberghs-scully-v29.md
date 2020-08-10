@@ -10,6 +10,7 @@ talks:
         speaker: "Sam Vloeberghs"
         speakerTwitter: "samvloeberghs"
         slides: "https://docs.google.com/presentation/d/e/2PACX-1vTaTapmFLieYHO-ElTE6Rf8iax8i93gWDWC_deBRYjA_kop7e7oMZayyWR06TW1DdNfenmy2luf3H89/pub?start=false&loop=false&delayms=3000#slide=id.g38b55282d5_2_233"
+        recording: "https://www.youtube.com/watch?v=f7CfXYMc8Qg"
         abstract: "In this talk we will cover the basics of getting started with Scully, the Static Site Generator for Angular, and explore the plugin system to discover routes and transform the HTML output.
         Not sure if Scully is the right tool for your project?
         And how does it relate to Universal?

@@ -29,6 +29,22 @@ layout: default
     {% endif %}
 
     {% if talk.slides %}
-    <a href="/assets/events/{{ page.meetupIndex }}/{{ talk.slides }}" target="_blank" rel="noopener">Slides</a>
+        {% if talk.slides contains '://' %}
+            {% assign slidesURL = talk.slides %}
+        {% else %}
+            {% capture slidesURL %}/assets/events/{{ page.meetupIndex }}/{{ talk.slides }}{% endcapture %}
+        {% endif %}
+        <a href="{{ slidesURL }}" target="_blank" rel="noopener">Slides</a>
+    {% endif %}
+
+    {% if talk.recording %}
+        <div>
+        {% assign youtubeID = talk.recording | split: "v=" | last %}
+        {% if talk.recording contains 'youtube' and youtubeID %}
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{ youtubeID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% else %}
+        <a href="{{ talk.recording }}" target="_blank" rel="noopener">Recording</a>
+        {% endif %}
+        </div>
     {% endif %}
 {% endfor %}

@@ -10,6 +10,7 @@ talks:
         speaker: "Oleksandr Poshtaruk"
         speakerTwitter: "El_Extremal"
         slides: "RxJS-unit-testing-Angular-Leipzig-14072020.pdf"
+        recording: "https://www.youtube.com/watch?v=3U0bQe0jcOU"
         abstract: "If you already tried to code unit tests for Observables - then you may be overwhelmed with a variety of methods on how to do that.
         Which one is right for you? Will it be jasmine with ‘done’ callback which we usually use for async code? Or maybe TestScheduler? Or you are going to use jasmine-marbles which is being mentioned in official Angular documentation?
         I am not even naming other methods. What is common for them and where they differ? How to put all of them in one solid picture in your head?
