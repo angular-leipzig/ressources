@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<h1>Angular Meetup Leipzig #{{ page.meetupIndex }}</h1>
+
+<div>
+    <strong>Date:</strong> {{ page.date | date_to_long_string }}
+    {% if page.time %}<br><strong>Time:</strong> {{ page.time }}{% endif %}
+    {% if page.location %}<br><strong>Location:</strong> {{ page.location }}{% endif %}
+</div>
+
+<img src="/assets/events/{{ page.meetupIndex }}/{{ page.banner }}" alt="Banner" style="width: 400px">
+
+{% for talk in page.talks %}
+    <h2>
+        Talk{% if page.talks.size > 1 %} {{ forloop.index }}{% endif %}:
+        {{ talk.title }}
+    </h2>
+    <p>
+        <strong>Speaker: {{ talk.speaker }}</strong>
+        {% if talk.speakerTwitter %}(<a href="https://twitter.com/{{ talk.speakerTwitter }}" target="_blank" rel="noopener">@{{ talk.speakerTwitter }}</a>){% endif %}
+    </p>
+    <p style="white-space: pre-wrap;">{{ talk.abstract }}</p>
+
+    {% if talk.speakerBio %}
+    <h3>About our speaker: {{ talk.speaker }}</h3>
+    <p>{{ talk.speakerBio }}</p>
+    {% endif %}
+
+    {% if talk.slides %}
+    <a href="/assets/events/{{ page.meetupIndex }}/{{ talk.slides }}" target="_blank" rel="noopener">Slides</a>
+    {% endif %}
+{% endfor %}

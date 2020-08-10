@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h1>Angular Meetup Leipzig</h1>
+
+This page is under construction. However, you can already find a few past talks and events here!
+
+<ul>
+    {% for event in site.events %}
+    <li>
+        <a href="{{ event.url }}">ngLeipzig #{{ event.meetupIndex }} ({{ event.date | date_to_long_string }})</a>
+    </li>    
+    {% endfor %}
+</ul>
