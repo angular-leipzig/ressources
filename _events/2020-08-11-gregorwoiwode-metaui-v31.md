@@ -9,6 +9,8 @@ talks:
     -   title: "metaUI | One Framework to build a highly declarative and customizable UI without using templates."
         speaker: "Gregor Woiwode"
         speakerTwitter: "GregOnNet"
+        slides: "oss-for-beginners.pdf"
+        recording: "https://www.youtube.com/watch?v=jX0n_83b5DA"
         abstract: "Most user interfaces that are written with a javascript framework are a mechanical application of (unstated) rules. Rules that are often rooted in domain object data models. In this talk we are going to explore a way for you to leverage that data model and the meta data associated with it, to scaffold your markup for you.
 
         We will explore a world of declarative user interfaces and how to build applications faster, with less code.
